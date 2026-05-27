@@ -315,6 +315,21 @@
       "icon": "./plugins/ejentum/ejentum-mcp/assets/ejentum-icon.svg"
     },
     {
+      "name": "epic",
+      "displayName": "Epic Harness",
+      "source": {
+        "source": "local",
+        "path": "./plugins/epicsagas/epic-harness"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development & Workflow",
+      "description": "Auto-trigger quality skills + self-evolving agent harness — orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure.",
+      "icon": "./plugins/epicsagas/epic-harness/assets/icon.png"
+    },
+    {
       "name": "espresso",
       "displayName": "Espresso",
       "source": {

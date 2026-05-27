@@ -220,6 +220,16 @@
       "install_url": "https://raw.githubusercontent.com/ejentum/ejentum-mcp/HEAD/.codex-plugin/plugin.json"
     },
     {
+      "name": "Epic Harness",
+      "url": "https://github.com/epicsagas/epic-harness",
+      "owner": "epicsagas",
+      "repo": "epic-harness",
+      "description": "Auto-trigger quality skills + self-evolving agent harness — orbit (spec-to-ship), evolve (skill mutation), team (multi-agent), TDD, check, ship, simplify, debug, perf, secure.",
+      "category": "Development & Workflow",
+      "source": "awesome-codex-plugins",
+      "install_url": "https://raw.githubusercontent.com/epicsagas/epic-harness/HEAD/.codex-plugin/plugin.json"
+    },
+    {
       "name": "Espresso",
       "url": "https://github.com/mirkobozzetto/espresso",
       "owner": "mirkobozzetto",
