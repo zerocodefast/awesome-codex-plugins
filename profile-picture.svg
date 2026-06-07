@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Gradient background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="50%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Shield gradient -->
+    <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0099cc"/>
+    </linearGradient>
+    
+    <!-- Circuit gradient -->
+    <linearGradient id="circuit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88"/>
+      <stop offset="100%" stop-color="#00cc66"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg)"/>
+  
+  <!-- Subtle grid pattern -->
+  <g stroke="#1a1a3e" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="50" x2="400" y2="50"/>
+    <line x1="0" y1="100" x2="400" y2="100"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="0" y1="250" x2="400" y2="250"/>
+    <line x1="0" y1="300" x2="400" y2="300"/>
+    <line x1="0" y1="350" x2="400" y2="350"/>
+    <line x1="50" y1="0" x2="50" y2="400"/>
+    <line x1="100" y1="0" x2="100" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <line x1="250" y1="0" x2="250" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="350" y1="0" x2="350" y2="400"/>
+  </g>
+  
+  <!-- Circuit lines -->
+  <g stroke="url(#circuit)" stroke-width="2" fill="none" opacity="0.6" filter="url(#glow)">
+    <path d="M 80 200 L 120 200 L 140 180 L 180 180"/>
+    <path d="M 80 220 L 130 220 L 150 240 L 200 240"/>
+    <path d="M 320 200 L 280 200 L 260 180 L 220 180"/>
+    <path d="M 320 220 L 270 220 L 250 240 L 200 240"/>
+    <circle cx="120" cy="200" r="4" fill="#00ff88"/>
+    <circle cx="140" cy="180" r="4" fill="#00ff88"/>
+    <circle cx="180" cy="180" r="4" fill="#00ff88"/>
+    <circle cx="130" cy="220" r="4" fill="#00ff88"/>
+    <circle cx="150" cy="240" r="4" fill="#00ff88"/>
+    <circle cx="200" cy="240" r="4" fill="#00ff88"/>
+    <circle cx="280" cy="200" r="4" fill="#00ff88"/>
+    <circle cx="260" cy="180" r="4" fill="#00ff88"/>
+    <circle cx="220" cy="180" r="4" fill="#00ff88"/>
+    <circle cx="270" cy="220" r="4" fill="#00ff88"/>
+    <circle cx="250" cy="240" r="4" fill="#00ff88"/>
+  </g>
+  
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="140" stroke="#00d4ff" stroke-width="2" fill="none" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="200" cy="200" r="130" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.2"/>
+  
+  <!-- Shield shape -->
+  <path d="M 200 80 
+           C 200 80, 280 100, 280 140 
+           C 280 200, 240 280, 200 320 
+           C 160 280, 120 200, 120 140 
+           C 120 100, 200 80, 200 80 Z" 
+        fill="url(#shield)" opacity="0.9" filter="url(#glow)"/>
+  
+  <!-- Shield inner glow -->
+  <path d="M 200 95 
+           C 200 95, 265 112, 265 145 
+           C 265 195, 230 265, 200 300 
+           C 170 265, 135 195, 135 145 
+           C 135 112, 200 95, 200 95 Z" 
+        fill="none" stroke="#00d4ff" stroke-width="3" opacity="0.5"/>
+  
+  <!-- Lock icon -->
+  <g transform="translate(200, 200)">
+    <!-- Lock body -->
+    <rect x="-35" y="-10" width="70" height="55" rx="8" fill="#0a0a0f" stroke="#00d4ff" stroke-width="3"/>
+    <!-- Lock shackle -->
+    <path d="M -20 -10 L -20 -30 C -20 -45, 20 -45, 20 -30 L 20 -10" 
+          fill="none" stroke="#00d4ff" stroke-width="4" stroke-linecap="round"/>
+    <!-- Keyhole -->
+    <circle cx="0" cy="15" r="8" fill="#00d4ff"/>
+    <rect x="-3" y="15" width="6" height="18" rx="2" fill="#00d4ff"/>
+    <!-- Checkmark -->
+    <path d="M -50 50 L -35 65 L -15 40" 
+          fill="none" stroke="#00ff88" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  </g>
+  
+  <!-- HOL text -->
+  <text x="200" y="365" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#00d4ff" letter-spacing="8" opacity="0.8">HOL GUARD</text>
+  
+  <!-- Corner accents -->
+  <g stroke="#00d4ff" stroke-width="2" opacity="0.4">
+    <line x1="20" y1="30" x2="20" y2="50"/>
+    <line x1="20" y1="30" x2="40" y2="30"/>
+    <line x1="380" y1="30" x2="380" y2="50"/>
+    <line x1="380" y1="30" x2="360" y2="30"/>
+    <line x1="20" y1="370" x2="20" y2="350"/>
+    <line x1="20" y1="370" x2="40" y2="370"/>
+    <line x1="380" y1="370" x2="380" y2="350"/>
+    <line x1="380" y1="370" x2="360" y2="370"/>
+  </g>
+  
+  <!-- Binary code accent -->
+  <text x="200" y="385" text-anchor="middle" font-family="monospace" font-size="8" fill="#00ff88" opacity="0.3" letter-spacing="2">01001000 01001111 01001100</text>
+</svg>

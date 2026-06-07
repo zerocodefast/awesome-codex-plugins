@@ -1,0 +1,11 @@
+🔐 AI agent security • HOL Guard contributor
+⚡ Building the first antivirus for AI coding agents
+🛡️ Protecting Codex, Claude Code, Cursor, Gemini, OpenCode
+📦 Plugin scanner • CI gates • Trust scoring
+
+"Your AI agent is only as safe as the plugins it installs."
+
+Building @hashgraph-online • HOL Guard OSS
+
+📫 security@hol.org
+🌐 hol.org/guard
