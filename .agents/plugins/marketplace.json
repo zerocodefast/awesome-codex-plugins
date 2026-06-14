@@ -181,12 +181,35 @@
       "icon": "./plugins/hyhmrright/brooks-lint/assets/logo.svg"
     },
     {
+      "name": "casefile",
+      "displayName": "Casefile",
+      "source": {
+        "source": "local",
+        "path": "./plugins/x4cc3/casefile"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development & Workflow",
+      "description": "Persistent security case tracking for bug bounties, CTFs, and security audits.",
+      "icon": "./plugins/x4cc3/casefile/assets/icon.svg"
+    },
+    {
       "name": "cc",
       "displayName": "Claude Code for Codex",
       "source": {
         "source": "local",
         "path": "./plugins/sendbird/cc-plugin-codex"
       },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development & Workflow",
+      "description": "Reverse of OpenAI's official Claude-hosted plugin: use Claude Code from Codex for reviews, rescue tasks, tracked background jobs, and hook-powered review gates.",
+      "icon": "./plugins/sendbird/cc-plugin-codex/assets/icon.png"
+    },
       "policy": {
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
