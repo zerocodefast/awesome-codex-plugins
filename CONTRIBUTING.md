@@ -45,9 +45,21 @@ Wait for the CI to pass on your repo's main branch, then copy the workflow run U
 
 ### Step 2: Run the scanner locally and check your score
 
+The release metadata below is synced automatically from the latest published HOL scanner release.
+
 ```bash
-pipx install plugin-scanner
+pipx install --force "plugin-scanner==2.0.845"
 plugin-scanner scan . --format text
+```
+
+Expected reviewed wheel SHA256: `dc12a65b9cd6e23f2f30ad83836ab687e05a434bcde61463719ad48eb4805c20`
+
+If you want to verify the exact wheel before install:
+
+```bash
+rm -rf .hol-plugin-scanner-dist
+python3 -m pip download --only-binary=:all: --no-deps --dest .hol-plugin-scanner-dist "plugin-scanner==2.0.845"
+python3 -m pip hash .hol-plugin-scanner-dist/*.whl
 ```
 
 You need a score of **80/130** or higher with **no critical or high severity findings**. Save the output to include in your PR description.
@@ -84,9 +96,11 @@ All plugins submitted to this list **must pass the HOL AI Plugin Scanner**.
 
 ### Run the Scanner Locally
 
+The commands below stay pinned to the same reviewed scanner release used in the submission guide.
+
 ```bash
-# Install
-pipx install plugin-scanner
+# Install the current reviewed release
+pipx install --force "plugin-scanner==2.0.845"
 
 # Scan your plugin
 plugin-scanner scan . --format text
@@ -97,6 +111,8 @@ plugin-scanner lint . --format text
 # Verify install readiness
 plugin-scanner verify . --format text
 ```
+
+Expected reviewed wheel SHA256: `dc12a65b9cd6e23f2f30ad83836ab687e05a434bcde61463719ad48eb4805c20`
 
 ### Required in Your Plugin Repo
 
